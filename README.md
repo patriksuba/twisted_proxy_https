@@ -6,3 +6,10 @@ Proxy for modifying https responses
 
 # Run proxy
 	twistd -y twisted.py 
+## Point insights-client to connect to proxy
+Add to insights-client.conf line:
+
+	proxy=http://127.0.0.1:8000
+Register insights-client:
+
+	insights-client --register
